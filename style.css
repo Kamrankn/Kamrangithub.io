@@ -1,0 +1,917 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Root variables for color, font, and layout settings */
+:root {
+  --primary-color: #dc030a;
+  --primary-color-dark: rgb(135, 6, 12);
+  --text-dark: #0a0a0a;
+  --text-light: #737373;
+  --extra-light: #e5e5e5;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Oswald", sans-serif;
+}
+
+/* Global styles to reset margin, padding, and box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container for sections with a max-width and auto margin for centering */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Header styles for sections */
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--header-font); :root {
+  --primary-color: #dc030a;
+  --primary-color-dark: rgb(135, 6, 12);
+  --text-dark: #0a0a0a;
+  --text-light: #737373;
+  --extra-light: #e5e5e5;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Oswald", sans-serif;
+}
+
+/* Global styles to reset margin, padding, and box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container for sections with a max-width and auto margin for centering */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Header styles for sections */
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--header-font); /* Font family for header */
+  color: var(--text-dark);
+  text-align: center;
+}
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* Description styles for sections */
+.section__description {
+  color: var(--text-light);
+}
+
+/* Button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  color: var(--white);
+  border-radius: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Primary button styles */
+.btn__primary {
+  background-color: var(--primary-color);
+}
+
+.btn__primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Secondary button styles */
+.btn__secondary {
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
+
+.btn__secondary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Image styles to make them responsive */
+img {
+  display: flex;
+  width: 100%;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Smooth scrolling behavior for HTML and body */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Body font styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: var(--text-dark);
+  position: fixed; 
+  width: 100%;
+  z-index: 9;
+}
+
+/* Navigation bar container styles */
+.nav__bar {
+  width: 100%; 
+  max-width: var(--max-width); /* Maximum width based on root variable */
+  margin-inline: auto; /* Center the container horizontally */
+}
+
+.nav__header {
+  padding: 1rem; 
+  display: flex; /* Use flexbox layout */
+  align-items: center; 
+  justify-content: space-between; /* Space between items */
+  background-color: var(--text-dark); 
+}
+
+.nav__logo img {
+  max-width: 90px; /* Maximum width for the logo image */
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white); 
+  cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+/* Navigation links container styles */
+.nav__links {
+  position: absolute; /* Absolute positioning */
+  top: 68px; /* Position from the top */
+  left: 0; 
+  width: 100%; 
+  padding: 2rem; 
+  list-style: none; /* Remove default list styling */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column; /* Column direction for small screens */
+  gap: 2rem; 
+  background-color: var(--text-dark); 
+  transition: 0.5s; 
+  z-index: -1; /* Initially behind other content */
+  transform: translateY(-100%); /* Hide links off-screen */
+}
+
+/* Open state for navigation links */
+.nav__links.open {
+  transform: translateY(0); /* Slide in links to be visible */
+}
+
+.nav__links a {
+  font-size: 1.1rem; /* Font size for the links */
+  font-family: var(--header-font); 
+  white-space: nowrap; /* Prevent text wrapping */
+  color: var(--white); 
+  transition: 0.3s; /* Transition for hover effect */
+}
+
+.nav__links a:hover {
+  color: var(--primary-color); /* Change color on hover */
+}
+
+/* Header styles */
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("Images/header.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Header container styles */
+.header__container {
+  padding-block: 10rem;
+  display: grid;
+}
+
+/* Header content styles */
+.header__content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;   /* Font weight for heading */
+  font-family: var(--header-font);
+  line-height: 5rem;
+  color: var(--primary-color);
+}
+
+.header__content h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: 400;
+  font-family: var(--header-font);
+  line-height: 3rem;
+  color: var(--white);
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--extra-light);
+}
+
+/* About section header styles */
+.about__header {
+  text-align: center;
+  display: grid;
+  gap: 1rem;  /* Gap between header & section */
+}
+
+.about__header .section__header {
+  font-size: 3rem;
+}
+
+.about__header .section__description {
+  max-width: 350px;
+  margin-inline: auto;
+}
+
+.about__grid {
+  margin-top: 4rem; 
+  display: grid; /* Use grid layout */
+  gap: 4rem; /* Gap between grid items */
+}
+
+.about__card h4 {
+  position: relative; /* Relative position */
+  isolation: isolate; /* Isolate stacking context for pseudo-element */
+  margin-bottom: 1rem; 
+  padding-top: 4rem; /* Top padding for spacing */
+  font-size: 1.2rem; 
+  font-weight: 600; 
+  font-family: var(--header-font); 
+  color: var(--text-dark); 
+}
+
+.about__card h4::before {
+  position: absolute; /* Absolute positioning for pseudo-element */
+  bottom: 0; 
+  left: 0; 
+  font-size: 6rem; 
+  line-height: 6rem; /* Line height matching font size */
+  color: var(--text-dark); 
+  opacity: 0.1; 
+  z-index: -1; /* Place behind text */
+}
+
+.about__card:nth-child(1) h4::before {
+  content: "01"; /* Pseudo-element content for the first card */
+}
+
+.about__card:nth-child(2) h4::before {
+  content: "02"; /* Pseudo-element content for the second card */
+}
+
+.about__card:nth-child(3) h4::before {
+  content: "03"; /* Pseudo-element content for the third card */
+}
+
+.about__card p {
+  color: var(--text-light); 
+}
+
+/* Session styles */
+.session {
+  display: grid;
+}
+
+.main__heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main__header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Session card styles */
+.session__card {
+  padding: 5rem 2rem; 
+  text-align: center; 
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center center; 
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+/* Background images for each session card with a dark overlay for readability */
+.session__card:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Images/award\ 1.jpg"); /* First card background */
+}
+
+.session__card:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Images/award\ 2.jpg"); /* Second card background */
+}
+
+.session__card:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Images/award\ 3.jpg"); /* Third card background */
+}
+
+.session__card:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Images/award\ 4.jpg"); /* Fourth card background */
+}
+
+/* Styling for the card titles */
+.session__card h4 {
+  position: relative; /* Set position to relative for the pseudo-element */
+  isolation: isolate; /* Isolate this element from the rest of the document */
+  max-width: fit-content; /* Fit the width to the content */
+  margin-inline: auto; 
+  margin-bottom: 1rem; 
+  font-size: 2rem; 
+  font-weight: 500; 
+  font-family: var(--header-font); 
+  color: var(--white); 
+}
+
+/* Styling for the pseudo-element before the card title */
+.session__card h4::before {
+  position: absolute; 
+  content: ""; /* Empty content for the pseudo-element */
+  top: 0; 
+  left: -5px; 
+  height: 25px; 
+  aspect-ratio: 1; /* Make it a square */
+  background-color: var(--primary-color); 
+  z-index: -1; /* Place behind the h4 element */
+}
+
+.session__card p {
+  max-width: 350px; /* Limit the width of the paragraph */
+  margin-inline: auto; /* Center the paragraph horizontally */
+  margin-bottom: 2rem; 
+  color: var(--extra-light); 
+}
+
+/* Trainer grid styles */
+.trainer__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.trainer__card img {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.trainer__card h4 {
+  font-size: 1.5rem; 
+  font-weight: 500; 
+  font-family: var(--header-font); /* Uses the custom header font defined in CSS variables */
+  color: var(--text-dark); 
+  text-align: center; 
+}
+
+.trainer__card p {
+  margin-bottom: 1rem; 
+  color: var(--text-light); /* Sets the text color to the light text color defined in CSS variables */
+  text-align: center; 
+}
+
+.trainer__socials {
+  display: flex; /* Uses flexbox layout for the container */
+  align-items: center; 
+  justify-content: center; 
+  gap: 1rem; /* Adds a gap of 1 rem between each social media icon */
+}
+
+.trainer__socials a {
+  font-size: 1.25rem; 
+  color: var(--text-light); 
+}
+
+/* Hover effect for the social media links within the trainer card */
+.trainer__socials a:hover {
+  color: var(--primary-color); 
+}
+
+.game {
+  background-color: var(--text-dark);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem; /* Set a fixed padding for a balanced look */
+}
+
+.game__header {
+  text-align: center;
+  margin-bottom: 1rem; /* Reduce bottom margin for tighter spacing */
+  font-size: 2.5rem; 
+  color: var(--white); /* Adjust color as needed */
+}
+
+.game__container {
+  margin-top: 1rem; /* Reduce top margin to bring the games closer to the header */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center; /* Center items horizontally */
+}
+
+.game__item {
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+  text-align: center; /* Center text horizontally */
+}
+
+.game__item:hover {
+  background-color: var(--primary-color);
+}
+
+.game__item h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--black);
+  text-align: center; /* Center heading horizontally */
+}
+
+.game__item p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+.game__item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Set border */
+}
+
+/* Styling for buttons in game items */
+.game__item .btn {
+  display: inline-block; /* Inline-block for padding and margins */
+  padding: 10px 20px; 
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the button corners */
+  background-color: #007bff; 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 18px; 
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.game__item .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the swiper component with top margin and bottom padding */
+.swiper {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+  width: 100%; /* Ensures the swiper takes the full width of its container */
+}
+
+.client__card {
+  max-width: 600px;
+  margin-inline: auto; /* Centers the client card horizontally */
+  text-align: center; 
+}
+
+.client__card img {
+  max-width: 100px; 
+  margin-inline: auto; /* Centers the image horizontally */
+  margin-bottom: 1rem; 
+  border: 2px solid var(--primary-color); /* Adds a solid border around the image */
+  border-radius: 100%; /* Makes the image circular */
+}
+
+/* Styles for the div containing additional text in the client card */
+.client__card > div {
+  font-size: 2rem; 
+  line-height: 2rem; /* Sets the line height to 2rem */
+  color: var(--text-light); 
+  opacity: 0.5; /* Makes the text semi-transparent */
+}
+
+.client__card p {
+  margin-bottom: 1rem; /* Adds bottom margin to the paragraph */
+  color: var(--text-light); 
+}
+
+/* Styles for the heading within the client card */
+.client__card h4 {
+  font-size: 1.2rem; 
+  font-weight: 600; 
+  color: var(--text-dark); /* Sets the text color to a dark variant */
+}
+
+.swiper-pagination-bullet {
+  height: 12px; /* Sets the height of the pagination bullets */
+  width: 12px; /* Sets the width of the pagination bullets */
+}
+
+/* Styles for the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color); 
+}
+
+/* style for stats section */
+.stats {
+  background-color: var(--text-dark);
+}
+
+.stats__container .section__header {
+  color: var(--white);
+}
+
+.stats__grid {
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure all items stay in one line */
+}
+
+.stats__card {
+  flex: 1; /* Allow cards to grow and shrink */
+  padding: 1.5rem;
+  background-color: white; /* Change background color to white */
+  border-radius: 8px;
+  text-align: center;
+  color: black; /* Set text color to black */
+}
+
+.stats__card img {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.stats__card h4 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--header-font);
+  color: black; /* Set text color to black */
+}
+
+.stats__card p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: black; /* Set text color to black */
+}
+
+.stats__card--back {
+  display: none; /* Hide the back content initially */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: black;
+}
+
+.stats__card--inner:hover .stats__card--back {
+  display: block; /* Display the back content on hover */
+}
+
+.stats__card--inner:hover .stats__card--front {
+  display: none; /* Hide the front content on hover */
+}
+
+.greatest {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37; /* Gold color for emphasis */
+}
+
+.logo__banner {
+  padding-block: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  text-align: center; /* Center aligning the heading */
+}
+
+.section__heading {
+  grid-column: 1 / -1; /* Spanning across all grid columns */
+  font-size: 2rem; /* Adjust the font size as desired */
+}
+
+.logo__banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+.logo__banner div {
+  text-align: center;
+  position: relative;
+}
+
+/* Tooltip container */
+.logo__banner div .tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: -50px; /* Adjusted for positioning below */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.logo__banner div .tooltip::after {
+  content: '';
+  position: absolute;
+  top: -5px; /* Adjusted for arrow pointing up */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent; /* Adjusted arrow direction */
+}
+
+/* Show the tooltip when hovering over the div */
+.logo__banner div:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer {
+  background-color: var(--text-dark);
+}
+
+/* Footer container using grid layout with specified gaps */
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem; /* 4rem row gap, 2rem column gap */
+}
+
+.footer__logo img {
+  margin-bottom: 1rem; 
+  max-width: 120px; 
+}
+
+/* Footer column paragraphs with bottom margin and light text color */
+.footer__col p {
+  margin-bottom: 2rem; /* Space below each paragraph */
+  color: var(--text-light); 
+}
+
+/* Unordered list styling for footer links */
+.footer__links {
+  list-style: none; /* Removes default list styling */
+  display: grid; 
+  gap: 1rem; 
+}
+
+.footer__links a {
+  color: var(--text-light); 
+}
+
+.footer__links a:hover {
+  color: var(--white); /* Changes text color to white on hover */
+}
+
+/* Styling for span within links, typically icons */
+.footer__links a span {
+  margin-right: 10px; /* Space to the right of the icon */
+  font-size: 1.2rem; 
+  color: var(--primary-color); 
+}
+
+/* Footer column heading styling */
+.footer__col h4 {
+  margin-bottom: 1rem; 
+  font-size: 1.5rem; 
+  font-weight: 500; 
+  font-family: var(--header-font); /* Font family for the heading */
+  color: var(--white); 
+}
+
+/* Form styling within footer column */
+.footer__col form {
+  margin-bottom: 2rem; /* Space below the form */
+  width: 100%; 
+  max-width: 400px; 
+  display: flex; /* Flexbox layout for form elements */
+  align-items: center; 
+  justify-content: center; 
+  background-color: var(--white); 
+  border-radius: 2px; /* Rounded corners */
+}
+
+/* Input field styling within the form */
+.footer__col input {
+  width: 100%; 
+  padding-inline: 1rem; 
+  outline: none; /* No outline */
+  border: none; /* No border */
+  color: var(--text-dark); 
+}
+
+/* Flexbox container for social media icons */
+.footer__socials {
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; /* Gap between social icons */
+}
+
+/* Styling for individual social media links */
+.footer__socials a {
+  padding: 5px 10px; /* Padding inside the link */
+  font-size: 1.25rem; 
+  color: var(--primary-color); 
+  background-color: var(--white); 
+  border-radius: 100%; /* Circular shape */
+}
+
+/* Hover effect for social media links */
+.footer__socials a:hover {
+  color: var(--white); /* White color for the icon on hover */
+  background-color: var(--primary-color); 
+}
+
+/* Footer bar text styling */
+.footer__bar {
+  padding: 1rem; /* Padding around the text */
+  font-size: 0.9rem; 
+  color: var(--text-light); 
+  text-align: center; 
+}
+  
+/* Media query for screens wider than 540px */
+@media (width > 540px) {
+  /* Adjust grid layout for certain sections */
+  .about__grid,
+  .trainer__grid,
+  .game__grid,
+  .stats__grid,
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  }
+
+  /* Adjust padding for session cards */
+  .session__card {
+    padding: 7rem 2rem; /* Top and bottom padding of 7rem, left and right padding of 2rem */
+  }
+}
+
+/* Media query for screens wider than 768px */
+@media (width > 768px) {
+  /* Adjust navigation styles */
+  nav {
+    position: static; /* Reset position */
+    padding: 1.5rem 1rem; 
+  }
+
+  /* Adjust layout and styles for navigation bar */
+  .nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* Gap between items */
+  }
+
+  .nav__header {
+    padding: 0; 
+    background-color: transparent; /* Reset background color */
+  }
+
+  /* Adjust logo image max width */
+  .nav__logo img {
+    max-width: 140px; 
+  }
+
+  .nav__menu__btn {
+    display: none; /* Hide menu button */
+  }
+
+  .nav__links {
+    position: static; /* Reset position */
+    padding: 0; 
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-end; /* Align links to the right */
+    background-color: transparent; 
+    transform: none; 
+    z-index: 1; /* Ensure links appear on top */
+  }
+
+  /* Adjust header container padding and layout */
+  .header__container {
+    padding-block: 12rem; 
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  }
+
+  .header__content {
+    grid-column: 2/3; /* Span content across second column */
+  }
+
+  /* Adjust layout and alignment for about section header */
+  .about__header {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    align-items: center; /* Align items vertically */
+  }
+
+  .about__header .section__header {
+    text-align: right; /* Align text to the right */
+  }
+
+  /* Adjust alignment of section description within about section */
+  .about__header .section__description {
+    text-align: left; 
+    margin-inline-start: unset; /* Reset start margin */
+  }
+
+  /* Adjust grid layout for about section */
+  .about__grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+  }
+
+  .session {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  /* Adjust padding for session cards at larger screens */
+  .session__card {
+    padding: 10rem 2rem; /* Increased padding */
+  }
+
+  /* Adjust grid layout for trainer section */
+  .trainer__grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns layout */
+  }
+
+  /* Adjust grid layout for game section */
+  .game__grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  /* Adjust grid layout for stats section */
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  /* Adjust grid layout for logo banner */
+  .logo__banner {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+/* Media query for screens wider than 1024px */
+@media (width > 1024px) {
+  /* Adjust gap between items in trainer and game grids */
+  .trainer__grid,
+  .game__grid {
+    gap: 2rem; /* Increased gap between items */
+  }
+
+  /* Adjust padding for game container */
+  .game__container {
+    padding: 2rem; 
+  }
+}
